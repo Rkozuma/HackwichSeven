@@ -8,13 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var TextFeild: UITextField!
+    @IBOutlet weak var DisplayLabel: UILabel!
+    
+    
+    override func viewDidLoad()
+    {
+        
+        self.DisplayLabel.text = " "
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
+    @IBAction func SetLabelButtonPressed(_ sender: Any)
+    {
+        let userInputText = TextFeild.text
+        self.DisplayLabel.text = userInputText
+    }
+    
+    
 
 }
 
